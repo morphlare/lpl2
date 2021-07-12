@@ -1,0 +1,46 @@
+#d1{
+    background-color: rgb(43,136,194);
+    height: 220px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+#s1{
+    font-size: 80px;
+    display: inline-block;
+    top: 12px;
+    color: rgb(8, 75, 97);
+    position: relative;
+}
+#s2{
+    font-size: 50px;
+    color: rgb(186,221,247);
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#s3{
+    font-size: 50px;
+    color: rgb(8, 75, 97);
+    font-weight: bold;
+    font-family: sans-serif;
+}
+#s4{
+    font-size: 28px;
+    color: rgb(253,254,254);
+    position: relative;
+    top: 150px;
+    right: 20px;
+}
+#s0{
+    position: absolute;
+    top: 40px;
+}
+body {
+    background-size: cover;
+    overflow: hidden;
+}
+form > label{
+    font-size: 16px;
+}

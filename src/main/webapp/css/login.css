@@ -1,0 +1,23 @@
+font{
+    color: azure;
+}
+h1{
+    color: azure;
+    font-size: 60px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1>span{
+    font-size: 80px;
+}
+form{
+    font-size: 16px;
+    color: azure;
+}
+body {
+    background: url(../img/login.jpg) no-repeat;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+}

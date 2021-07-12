@@ -1,0 +1,25 @@
+#d2{
+    background-image: linear-gradient(to right, #DDDDDD, #FBFBFB);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+#s5{
+    font-size: 17px;
+    line-height: 21px;
+    margin-top: 10px;
+    display: inline-block;
+}
+#s6{
+    font-size: 14px;
+    line-height:21px;
+}
+#s7{
+    font-size: 14px;
+    line-height: 21px;
+}
+a:focus {
+    text-decoration: none;
+}

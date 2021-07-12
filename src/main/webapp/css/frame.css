@@ -1,0 +1,11 @@
+#media-body{
+    font-size: 16px;
+    padding-left: 50px;
+}
+#media{
+    display: inline-block;
+    box-shadow: 10px 10px 10px darkgray;
+    width: 420px;
+    border: black solid;
+    border-radius: 10px;
+}

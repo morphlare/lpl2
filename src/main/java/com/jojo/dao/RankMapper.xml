@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojo.dao.RankMapper">
+    <select id="getRankList" resultType="Rank">
+        select * from `rank`
+    </select>
+    <select id="getRankByName" parameterType="String" resultType="Rank">
+        select * from `rank` where rank_name=#{rankName}
+    </select>
+</mapper>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jojo.dao.PlayerMapper">
+    <select id="getLoginPlayer" resultType="Player">
+        select * from player p, `rank` r WHERE p.rank_id = r.rank_id and player_name=#{userName} and password=#{password}
+    </select>
+
+    <select id="getPlayerById" resultType="Player">
+        select * from player p, `rank` r WHERE p.rank_id = r.rank_id and player_id=#{id}
+    </select>
+
+    <insert id="insertPlayer" parameterType="Player">
+        insert into player (player_id, player_name, rank_id, age, sex, role, password, pic)
+        values (#{playerId}, #{playerName},#{rankId},#{age},#{sex},#{role},#{password},#{pic});
+    </insert>
+
+    <delete id="deleteById" parameterType="int">
+        delete from player where player_id=#{id}
+    </delete>
+
+    <update id="updatePlayer" parameterType="Player">
+        update player
+        set player_name=#{playerName},rank_id=#{rankId},age=#{age},role=#{role},password=#{password},identity=#{identity}
+        where player_id=#{playerId}
+    </update>
+
+    <select id="getCount" resultType="long">
+        select count(*) from player
+    </select>
+
+    <select id="getAll" resultType="Player">
+        select * from player p, `rank` r WHERE p.rank_id = r.rank_id
+    </select>
+
+    <select id="getPlayerCount" resultType="int">
+        <bind name="_userName" value="'%'+userName+'%'"></bind>
+        select count(*) from player p ,`rank` r where p.rank_id = r.rank_id
+        <if test="userName!=null">
+            and p.player_name like #{_userName}
+        </if>
+        <if test="rankId>0">
+            and r.rank_id=#{rankId}
+        </if>
+    </select>
+
+    <update id="updatePwd">
+        update player
+        set password=#{password}
+        where player_id=#{playerId}
+    </update>
+
+    <select id="getPlayerList" resultType="Player">
+        <bind name="_userName" value="'%'+userName+'%'"></bind>
+        select * from player p, `rank` r WHERE p.rank_id = r.rank_id
+        <if test="userName!=null">
+            and p.player_name like #{_userName}
+        </if>
+        <if test="rankId>0">
+            and p.rank_id=#{rankId}
+        </if>
+        order by player_id
+    </select>
+</mapper>
