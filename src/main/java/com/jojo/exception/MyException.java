@@ -14,6 +14,7 @@ public class MyException extends Exception{
     public MyException() {
     }
 
+    @Override
     public String getMessage() {
         return message;
     }
