@@ -69,7 +69,7 @@ public class PlayerController {
 
         Map<String, String> resultMap = new HashMap<>();
 
-        if (o == null) { //Session失效了，session过期
+        if (o == null) { //Session为null，说明session过期了
             resultMap.put("result", "sessionerror");
         } else if (StringUtils.isNullOrEmpty(oldPassword)) { //输入的密码为空
             resultMap.put("result", "error");
